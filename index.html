@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vignesh | LinkedIn Portfolio</title>
+<title>Vignesh | Data Analyst Portfolio</title>
 
 <style>
 body {
@@ -29,9 +29,6 @@ body {
 
 /* LAYOUT */
 .container {
-    display: grid;
-    grid-template-columns: 3fr 1.5fr;
-    gap: 20px;
     width: 1000px;
     margin: 20px auto;
 }
@@ -69,14 +66,27 @@ body {
     margin-top: 60px;
 }
 
-/* BUTTON */
-button {
+/* KPI CARDS */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.kpi {
     background: #0a66c2;
     color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* CHART MOCK */
+.chart {
+    height: 200px;
+    background: linear-gradient(to top, #0a66c2 40%, #e0e7ff);
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* SKILLS */
@@ -92,16 +102,14 @@ button {
     border-radius: 5px;
 }
 
-/* POSTS */
-.post {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    margin-top: 10px;
-}
-
-.post img {
-    width: 100%;
-    border-radius: 10px;
+/* BUTTON */
+button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -116,9 +124,6 @@ button {
 
 <div class="container">
 
-<!-- LEFT SIDE -->
-<div>
-
 <!-- PROFILE -->
 <div class="card">
     <div class="banner"></div>
@@ -132,50 +137,36 @@ button {
     </div>
 </div>
 
+<!-- KPI DASHBOARD -->
+<div class="card">
+    <h3>Business Dashboard Overview</h3>
+
+    <div class="kpi-container">
+        <div class="kpi"><h2>₹12M</h2><p>Revenue</p></div>
+        <div class="kpi"><h2>18%</h2><p>Growth</p></div>
+        <div class="kpi"><h2>2.5K</h2><p>Customers</p></div>
+        <div class="kpi"><h2>92%</h2><p>Retention</p></div>
+    </div>
+
+    <div class="chart"></div>
+</div>
+
 <!-- ABOUT -->
 <div class="card">
     <h3>About</h3>
     <p>
-    Strategic and results-driven Data Analyst specializing in dashboards, KPI frameworks, and business insights using Tableau, Power BI, and SQL.
+    Strategic Data Analyst specializing in dashboards, KPI frameworks, and business insights using Tableau, Power BI, and SQL.
     </p>
 </div>
 
-<!-- ACTIVITY / POSTS -->
+<!-- CASE STUDY -->
 <div class="card">
-    <h3>Activity</h3>
-
-    <div class="post">
-        <p><b>Built Executive Dashboard</b></p>
-        <p>Created cross-domain dashboards integrating Finance & HR data.</p>
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-    </div>
-
-    <div class="post">
-        <p><b>Automated Reporting</b></p>
-        <p>Improved reporting efficiency using ETL pipelines.</p>
-        <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4">
-    </div>
-
+    <h3>Case Study: Sales Performance Analysis</h3>
+    <p><b>Problem:</b> Declining revenue across regions</p>
+    <p><b>Approach:</b> Data modeling + Tableau dashboards</p>
+    <p><b>Insight:</b> Region X underperforming due to low customer retention</p>
+    <p><b>Impact:</b> Improved business decisions and reporting efficiency</p>
 </div>
-
-<!-- PROJECTS -->
-<div class="card">
-    <h3>Projects</h3>
-    <p>Executive KPI Dashboard</p>
-    <p>Data Pipeline Automation</p>
-    <p>KPI Framework Development</p>
-</div>
-
-<!-- CERTIFICATION -->
-<div class="card">
-    <h3>Certification</h3>
-    <p><b>Tableau Desktop Specialist</b></p>
-</div>
-
-</div>
-
-<!-- RIGHT SIDE -->
-<div>
 
 <!-- SKILLS -->
 <div class="card">
@@ -194,14 +185,10 @@ button {
     <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
 </div>
 
-<!-- INSIGHTS -->
+<!-- CERTIFICATION -->
 <div class="card">
-    <h3>Insights</h3>
-    <p>Dashboard Performance Optimization</p>
-    <p>KPI Standardization</p>
-    <p>Data Modelling</p>
-</div>
-
+    <h3>Certification</h3>
+    <p><b>Tableau Desktop Specialist</b></p>
 </div>
 
 </div>

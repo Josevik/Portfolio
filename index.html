@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Analyst Portfolio</title>
+<title>Vignesh | Data Analyst Portfolio</title>
 
 <style>
 body {
@@ -13,7 +13,6 @@ body {
     color: white;
 }
 
-/* Layout */
 .container {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -65,6 +64,17 @@ body {
     box-shadow: 0 0 20px #38bdf8;
 }
 
+/* Profile */
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
 /* Skills */
 .skill {
     margin-bottom: 15px;
@@ -100,17 +110,6 @@ body {
     border-radius: 10px;
 }
 
-/* Profile */
-.profile {
-    text-align: center;
-}
-
-.profile img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
 /* Fade animation */
 .fade {
     opacity: 0;
@@ -123,6 +122,17 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 </style>
 </head>
@@ -138,6 +148,7 @@ body {
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
+    <a href="#achievements">Achievements</a>
 </div>
 
 <!-- Main -->
@@ -148,33 +159,38 @@ body {
     <img src="https://via.placeholder.com/120" alt="profile">
     <h2>Vignesh</h2>
     <p>Senior Data Analyst</p>
+
+    <a href="Joseph Resume 2026.pdf" download>
+        <button>Download Resume</button>
+    </a>
 </div>
 
 <!-- About -->
 <div class="card fade" id="about">
     <h2>About Me</h2>
-    <p>I am a Senior Data Analyst with 7+ years of experience in Tableau, Power BI, and SQL. I specialize in building dashboards and turning data into business insights.</p>
+    <p>
+    Strategic and results-driven Senior Data Analyst with 3.4+ years of experience delivering executive dashboards and data-driven insights. Specialized in Tableau, Power BI, SQL, and data modeling. Proven ability to transform complex datasets into actionable business strategies.
+    </p>
 </div>
 
 <!-- Skills -->
 <div class="card fade" id="skills">
     <h2>Skills</h2>
 
-    <div class="skill">
-        <p>Tableau</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
+    <div class="skill"><p>Tableau</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
 
-    <div class="skill">
-        <p>Power BI</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
+    <div class="skill"><p>Power BI</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
 
-    <div class="skill">
-        <p>SQL</p>
-        <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-    </div>
+    <div class="skill"><p>SQL</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
 
+    <div class="skill"><p>Python</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+
+    <div class="skill"><p>AWS / Redshift</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
 </div>
 
 <!-- Projects -->
@@ -184,8 +200,8 @@ body {
     <div class="project">
         <img src="https://via.placeholder.com/100">
         <div>
-            <h3>Sales Dashboard</h3>
-            <p>Built interactive Tableau dashboard for revenue tracking.</p>
+            <h3>Executive KPI Dashboard</h3>
+            <p>Built cross-domain dashboards integrating Finance, HR, and Retail data to support leadership decision-making.</p>
         </div>
     </div>
 
@@ -194,18 +210,46 @@ body {
     <div class="project">
         <img src="https://via.placeholder.com/100">
         <div>
-            <h3>Customer Insights</h3>
-            <p>Power BI dashboard for customer segmentation.</p>
+            <h3>Data Pipeline & Reporting Automation</h3>
+            <p>Designed ETL pipelines and automated reporting workflows, improving data refresh performance and accuracy.</p>
         </div>
     </div>
 
+    <br>
+
+    <div class="project">
+        <img src="https://via.placeholder.com/100">
+        <div>
+            <h3>KPI Standardization Framework</h3>
+            <p>Standardized KPI definitions across teams ensuring consistent reporting and improved data reliability.</p>
+        </div>
+    </div>
 </div>
 
 <!-- Experience -->
 <div class="card fade" id="experience">
     <h2>Experience</h2>
-    <p><b>Senior Data Analyst</b> - Bilight Solutions</p>
-    <p>Worked on dashboards, SQL queries, and reporting automation.</p>
+
+    <p><b>Senior Data Analyst</b> - Bilight Solutions (2023 - Present)</p>
+
+    <ul>
+        <li>Defined analytics roadmap aligning dashboards with business goals</li>
+        <li>Built scalable data models and reporting layers</li>
+        <li>Developed executive dashboards in Tableau & Power BI</li>
+        <li>Established KPI governance and data validation frameworks</li>
+        <li>Mentored junior analysts and improved analytics practices</li>
+    </ul>
+</div>
+
+<!-- Achievements -->
+<div class="card fade" id="achievements">
+    <h2>Key Achievements</h2>
+    <ul>
+        <li>Reduced dashboard delivery time through automation</li>
+        <li>Improved data accuracy with validation frameworks</li>
+        <li>Enabled executive decision-making with unified dashboards</li>
+        <li>Standardized KPIs across business units</li>
+    </ul>
 </div>
 
 </div>

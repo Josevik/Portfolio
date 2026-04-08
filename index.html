@@ -21,7 +21,6 @@
         img.profile {
             width: 120px;
             border-radius: 50%;
-            margin-bottom: 10px;
             border: 4px solid white;
         }
 
@@ -49,17 +48,22 @@
             margin-bottom: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            animation: fadeIn 1s ease-in;
         }
 
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(20px);}
-            to {opacity: 1; transform: translateY(0);}
+        /* SCROLL ANIMATION */
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h2 {
             border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
         }
 
         /* PROJECT CARDS */
@@ -79,7 +83,6 @@
         .card img {
             width: 100%;
             height: 150px;
-            object-fit: cover;
         }
 
         .card:hover {
@@ -99,12 +102,52 @@
         .bar {
             background: #ddd;
             border-radius: 20px;
-            overflow: hidden;
         }
 
         .bar div {
             height: 10px;
             background: #4e54c8;
+            width: 0;
+            animation: fillBar 2s forwards;
+        }
+
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+
+        /* TOOLS */
+        .tool {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background: #4e54c8;
+            color: white;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .tool:hover {
+            transform: scale(1.2);
+            background: #8f94fb;
+        }
+
+        /* EXPERIENCE */
+        .timeline p {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 1s forwards;
+        }
+
+        .timeline p:nth-child(1) { animation-delay: 0.2s; }
+        .timeline p:nth-child(2) { animation-delay: 0.4s; }
+        .timeline p:nth-child(3) { animation-delay: 0.6s; }
+        .timeline p:nth-child(4) { animation-delay: 0.8s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .button {
@@ -142,16 +185,12 @@
 
 <div class="container">
 
-    <div class="section" id="about">
+    <div class="section hidden" id="about">
         <h2>About Me</h2>
-        <p>
-        Senior Data Analyst with 3.4 years of experience in end-to-end analytics, working across Finance and HR domains.
-        Skilled in Tableau, SQL, ETL, and dashboard development.
-        </p>
+        <p>Senior Data Analyst with 7+ years of experience in end-to-end analytics, working across Finance and HR domains.</p>
     </div>
 
-    <!-- PROJECTS -->
-    <div class="section" id="projects">
+    <div class="section hidden" id="projects">
         <h2>Projects</h2>
 
         <div class="projects">
@@ -159,7 +198,7 @@
                 <img src="https://via.placeholder.com/300">
                 <div class="card-content">
                     <h3>Sales Dashboard</h3>
-                    <p>Revenue, profit & KPI analysis dashboard.</p>
+                    <p>Revenue and KPI insights dashboard.</p>
                 </div>
             </div>
 
@@ -167,7 +206,7 @@
                 <img src="https://via.placeholder.com/300">
                 <div class="card-content">
                     <h3>Loan Analytics</h3>
-                    <p>Delinquency and risk insights dashboard.</p>
+                    <p>Delinquency and risk analysis dashboard.</p>
                 </div>
             </div>
 
@@ -175,14 +214,13 @@
                 <img src="https://via.placeholder.com/300">
                 <div class="card-content">
                     <h3>Snowflake Integration</h3>
-                    <p>End-to-end pipeline with Snowflake + Power BI.</p>
+                    <p>Pipeline with Snowflake + Power BI.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SKILLS -->
-    <div class="section" id="skills">
+    <div class="section hidden" id="skills">
         <h2>Skills</h2>
 
         <div class="skill">Tableau
@@ -198,13 +236,28 @@
         </div>
 
         <div class="skill">Snowflake
-            <div class="bar"><div style="width:60%"></div></div>
+            <div class="bar"><div style="width:65%"></div></div>
         </div>
 
+        <h3>Tools</h3>
+        <span class="tool">Tableau</span>
+        <span class="tool">Power BI</span>
+        <span class="tool">SQL</span>
+        <span class="tool">Snowflake</span>
+        <span class="tool">Excel</span>
     </div>
 
-    <!-- CONTACT -->
-    <div class="section" id="contact">
+    <div class="section hidden">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <p>Senior Data Analyst – Bilight Solutions</p>
+            <p>Built dashboards for Finance & HR</p>
+            <p>Worked on ETL, SQL & Data Modeling</p>
+            <p>Implemented RLS & Tableau Server</p>
+        </div>
+    </div>
+
+    <div class="section hidden" id="contact">
         <h2>Contact</h2>
         <p>Email: yourmail@gmail.com</p>
         <a class="button" href="#">LinkedIn</a>
@@ -215,6 +268,18 @@
 <footer>
     <p>© 2026 Vignesh | Portfolio</p>
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

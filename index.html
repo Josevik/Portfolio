@@ -3,206 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vignesh | Data Analyst Portfolio</title>
+<title>Vignesh | LinkedIn Portfolio</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: white;
+    font-family: Arial, sans-serif;
+    background: #f3f2ef;
 }
 
-.container {
+/* Navbar */
+.navbar {
+    background: white;
+    padding: 10px 50px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Sidebar */
-.sidebar {
-    background: #020617;
-    height: 100vh;
-    padding: 20px;
-    position: fixed;
-    width: 220px;
+.logo {
+    color: #0a66c2;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-.sidebar h2 {
-    color: #38bdf8;
-}
-
-.sidebar a {
-    display: block;
-    margin: 15px 0;
-    color: #cbd5f5;
+.navbar a {
+    margin-left: 20px;
     text-decoration: none;
-    transition: 0.3s;
+    color: #333;
 }
 
-.sidebar a:hover {
-    color: #38bdf8;
-    transform: translateX(5px);
+/* Layout */
+.container {
+    width: 900px;
+    margin: 20px auto;
 }
 
-/* Main */
-.main {
-    margin-left: 240px;
-    padding: 20px;
-    width: calc(100% - 240px);
-}
-
-/* Cards */
+/* Card */
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
+    background: white;
+    border-radius: 10px;
     margin-bottom: 20px;
-    transition: 0.4s;
-    max-width: 900px;
+    padding: 20px;
+    border: 1px solid #ddd;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #38bdf8;
+/* Profile Header */
+.banner {
+    height: 180px;
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926') center/cover;
+    border-radius: 10px 10px 0 0;
 }
 
-/* Profile */
-.profile {
-    text-align: center;
+.profile-section {
+    position: relative;
+    padding: 20px;
 }
 
-.profile img {
+.profile-img {
     width: 120px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    border: 4px solid white;
+    position: absolute;
+    top: -60px;
+}
+
+.profile-info {
+    margin-top: 70px;
+}
+
+button {
+    padding: 8px 15px;
+    background: #0a66c2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 /* Skills */
-.skill {
-    margin-bottom: 15px;
-}
-
 .skill-bar {
-    height: 8px;
-    background: #334155;
+    background: #eee;
     border-radius: 5px;
+    height: 8px;
+    margin-top: 5px;
 }
 
 .skill-fill {
+    background: #0a66c2;
     height: 8px;
-    background: #38bdf8;
     border-radius: 5px;
-    width: 0;
-    animation: fill 2s forwards;
-}
-
-@keyframes fill {
-    from { width: 0; }
 }
 
 /* Projects */
 .project {
     display: flex;
     gap: 15px;
-    align-items: center;
 }
 
 .project img {
     width: 120px;
-    border-radius: 10px;
-}
-
-/* Fade animation */
-.fade {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Button */
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #38bdf8;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+    border-radius: 8px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<!-- Sidebar -->
-<div class="sidebar">
-    <h2>Vignesh</h2>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certification</a>
-    <a href="#achievements">Achievements</a>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">in</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </div>
 </div>
 
-<!-- Main -->
-<div class="main">
+<div class="container">
 
 <!-- Profile -->
-<div class="card profile fade">
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
-    <h2>Vignesh</h2>
-    <p>Senior Data Analyst</p>
+<div class="card">
+    <div class="banner"></div>
+    <div class="profile-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="profile-img">
 
-    <a href="Joseph Resume 2026.pdf" download>
-        <button>Download Resume</button>
-    </a>
+        <div class="profile-info">
+            <h2>Vignesh</h2>
+            <p>Senior Data Analyst</p>
+            <button>Download Resume</button>
+        </div>
+    </div>
 </div>
 
 <!-- About -->
-<div class="card fade" id="about">
-    <h2>About Me</h2>
+<div class="card" id="about">
+    <h3>About</h3>
     <p>
-    Strategic and results-driven Senior Data Analyst specializing in Tableau, Power BI, SQL, and data modeling. Expert in building executive dashboards, KPI frameworks, and transforming complex data into actionable business insights.
+    Strategic and results-driven Senior Data Analyst specializing in Tableau, Power BI, SQL, and data modeling. Expert in building executive dashboards and transforming complex data into actionable insights.
     </p>
 </div>
 
 <!-- Skills -->
-<div class="card fade" id="skills">
-    <h2>Skills</h2>
+<div class="card" id="skills">
+    <h3>Skills</h3>
 
-    <div class="skill"><p>Tableau</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+    <p>Tableau</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
 
-    <div class="skill"><p>Power BI</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+    <p>Power BI</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
 
-    <div class="skill"><p>SQL</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+    <p>SQL</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
 
-    <div class="skill"><p>Python</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-
-    <div class="skill"><p>AWS / Redshift</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+    <p>AWS / Redshift</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
 </div>
 
 <!-- Projects -->
-<div class="card fade" id="projects">
-    <h2>Projects</h2>
+<div class="card" id="projects">
+    <h3>Projects</h3>
 
     <div class="project">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
         <div>
-            <h3>Executive KPI Dashboard</h3>
-            <p>Built cross-domain dashboards integrating Finance, HR, and Retail data for leadership decision-making.</p>
+            <h4>Executive KPI Dashboard</h4>
+            <p>Cross-domain dashboards for leadership insights.</p>
         </div>
     </div>
 
@@ -211,41 +180,29 @@ button {
     <div class="project">
         <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4">
         <div>
-            <h3>Data Pipeline & Automation</h3>
-            <p>Designed ETL workflows and automated reporting processes to improve performance and accuracy.</p>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="project">
-        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938">
-        <div>
-            <h3>KPI Framework Development</h3>
-            <p>Standardized KPI definitions across teams ensuring consistent and reliable reporting.</p>
+            <h4>Data Pipeline Automation</h4>
+            <p>Automated ETL workflows improving performance.</p>
         </div>
     </div>
 </div>
 
 <!-- Certification -->
-<div class="card fade" id="certifications">
-    <h2>Certification</h2>
+<div class="card">
+    <h3>Certification</h3>
     <p><b>Tableau Desktop Specialist</b></p>
-    <p>Certified in dashboard design, KPI modeling, and visual storytelling.</p>
+    <p>Dashboard design, KPI modeling, and storytelling.</p>
 </div>
 
 <!-- Achievements -->
-<div class="card fade" id="achievements">
-    <h2>Key Achievements</h2>
+<div class="card">
+    <h3>Achievements</h3>
     <ul>
-        <li>Reduced dashboard delivery time through automation</li>
-        <li>Improved data accuracy with validation frameworks</li>
-        <li>Enabled executive decision-making with unified dashboards</li>
-        <li>Standardized KPIs across business units</li>
+        <li>Reduced dashboard delivery time</li>
+        <li>Improved data accuracy</li>
+        <li>Enabled executive decision-making</li>
     </ul>
 </div>
 
-</div>
 </div>
 
 </body>

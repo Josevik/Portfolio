@@ -3,104 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vignesh | Data Analyst Portfolio</title>
+<title>Vignesh | Data Analyst</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f3f2ef;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #111;
 }
 
-/* NAVBAR */
-.navbar {
-    background: white;
-    padding: 10px 50px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    color: #0a66c2;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-/* CONTAINER */
+/* Container */
 .container {
-    width: 1000px;
-    margin: 20px auto;
+    width: 800px;
+    margin: 60px auto;
 }
 
-/* CARD */
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
+/* Name */
+h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
 }
 
-/* PROFILE */
-.banner {
-    height: 150px;
-    background: url('https://images.unsplash.com/photo-1557683316-973673baf926') center/cover;
-    border-radius: 10px 10px 0 0;
+.subtitle {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.profile-section {
-    position: relative;
+/* Sections */
+.section {
+    margin-bottom: 40px;
 }
 
-.profile-img {
-    width: 100px;
-    border-radius: 50%;
-    border: 3px solid white;
-    position: absolute;
-    top: -50px;
-    left: 20px;
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #888;
 }
 
-.profile-info {
-    margin-top: 60px;
-}
-
-/* KPI */
-.kpi-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-.kpi {
-    background: #0a66c2;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* SKILLS */
-.skill-bar {
-    height: 8px;
-    background: #eee;
-    border-radius: 5px;
-}
-
-.skill-fill {
-    height: 8px;
-    background: #0a66c2;
-    border-radius: 5px;
-}
-
-/* BUTTON */
-button {
-    background: #0a66c2;
-    color: white;
+/* Divider */
+hr {
     border: none;
-    padding: 8px 15px;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+/* Skills */
+.skills span {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    background: #f3f3f3;
     border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Button */
+button {
+    padding: 10px 18px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 </style>
@@ -108,86 +74,68 @@ button {
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-    <div class="logo">in</div>
-    <div>Vignesh | Data Analyst</div>
-</div>
-
 <div class="container">
 
-<!-- PROFILE -->
-<div class="card">
-    <div class="banner"></div>
-    <div class="profile-section">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="profile-img">
-        <div class="profile-info">
-            <h2>Vignesh</h2>
-            <p>Senior Data Analyst specializing in executive dashboards, data modelling, and scalable analytics solutions that drive business impact</p>
-            <button>Download Resume</button>
-        </div>
-    </div>
+<!-- HEADER -->
+<h1>Vignesh</h1>
+<p class="subtitle">
+Senior Data Analyst focused on building high-quality dashboards and data models that drive business decisions
+</p>
+
+<button>Download Resume</button>
+
+<hr>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>ABOUT</h2>
+    <p>
+    I design and deliver data solutions that help businesses understand performance, identify opportunities, and make better decisions. My work focuses on building scalable dashboards, defining KPIs, and ensuring data accuracy across systems.
+    </p>
 </div>
 
-<!-- KPI DASHBOARD -->
-<div class="card">
-    <h3>Business Dashboard Overview</h3>
-
-    <div class="kpi-container">
-        <div class="kpi"><h2>₹12M</h2><p>Revenue</p></div>
-        <div class="kpi"><h2>18%</h2><p>Growth</p></div>
-        <div class="kpi"><h2>2.5K</h2><p>Customers</p></div>
-        <div class="kpi"><h2>92%</h2><p>Retention</p></div>
-    </div>
-</div>
+<hr>
 
 <!-- EXPERIENCE -->
-<div class="card">
-    <h3>Experience Highlights</h3>
-    <ul>
-        <li>Designed and delivered high-impact, executive-level dashboards enabling faster and more accurate business decision-making</li>
-        <li>Led end-to-end client interactions, translating complex business requirements into scalable analytical solutions</li>
-        <li>Recognized with the <b>Best Team Award (2025–2026)</b> for outstanding performance and collaboration</li>
-        <li>Developed advanced dashboards with strong focus on data modelling, performance optimization, and usability</li>
-    </ul>
+<div class="section">
+    <h2>EXPERIENCE</h2>
+    <p>
+    Delivered executive dashboards, handled client requirements end-to-end, and translated business needs into analytical solutions. Recognized with Best Team Award for strong collaboration and delivery.
+    </p>
 </div>
+
+<hr>
 
 <!-- SKILLS -->
-<div class="card">
-    <h3>Core Expertise</h3>
-
-    <p>Tableau & Power BI (Advanced Dashboard Development)</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-
-    <p>SQL (Advanced Querying & Optimization)</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-
-    <p>Data Modelling & KPI Frameworks</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-
-    <p>Microsoft Fabric</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-
-    <p>Snowflake</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-
-    <p>Excel (Advanced Analytics & Reporting)</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+<div class="section">
+    <h2>SKILLS</h2>
+    <div class="skills">
+        <span>Tableau</span>
+        <span>Power BI</span>
+        <span>SQL</span>
+        <span>Data Modelling</span>
+        <span>Microsoft Fabric</span>
+        <span>Snowflake</span>
+        <span>Excel</span>
+    </div>
 </div>
 
-<!-- CASE STUDY -->
-<div class="card">
-    <h3>Case Study: Sales Performance Analysis</h3>
-    <p><b>Problem:</b> Declining revenue across regions</p>
-    <p><b>Approach:</b> Data modelling + dashboard development</p>
-    <p><b>Insight:</b> Identified underperforming segments and trends</p>
-    <p><b>Impact:</b> Enabled better strategic decision-making</p>
+<hr>
+
+<!-- PROJECT -->
+<div class="section">
+    <h2>PROJECT</h2>
+    <p>
+    Built cross-functional dashboards integrating multiple data sources, enabling leadership to monitor KPIs and improve decision-making.
+    </p>
 </div>
+
+<hr>
 
 <!-- CERTIFICATION -->
-<div class="card">
-    <h3>Certification</h3>
-    <p><b>Tableau Desktop Specialist</b></p>
+<div class="section">
+    <h2>CERTIFICATION</h2>
+    <p>Tableau Desktop Specialist</p>
 </div>
 
 </div>

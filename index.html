@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Vignesh | Data Analyst Portfolio</title>
+
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -17,14 +18,11 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 40px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
+        img.profile {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 4px solid white;
         }
 
         nav {
@@ -39,11 +37,6 @@
             color: white;
             margin: 0 15px;
             text-decoration: none;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #8f94fb;
         }
 
         .container {
@@ -56,6 +49,12 @@
             margin-bottom: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
         }
 
         h2 {
@@ -63,22 +62,49 @@
             padding-bottom: 5px;
         }
 
-        .skills span {
-            display: inline-block;
-            background: #4e54c8;
-            color: white;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 20px;
+        /* PROJECT CARDS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .timeline {
-            border-left: 3px solid #4e54c8;
-            padding-left: 20px;
+        .card {
+            background: #fafafa;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
         }
 
-        .timeline p {
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        /* SKILL BARS */
+        .skill {
             margin: 10px 0;
+        }
+
+        .bar {
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar div {
+            height: 10px;
+            background: #4e54c8;
         }
 
         .button {
@@ -88,7 +114,6 @@
             padding: 10px 15px;
             border-radius: 8px;
             text-decoration: none;
-            margin-top: 10px;
         }
 
         footer {
@@ -103,13 +128,14 @@
 <body>
 
 <header>
+    <img src="https://via.placeholder.com/120" class="profile">
     <h1>Vignesh</h1>
     <p>Senior Data Analyst | Tableau | Power BI | SQL | Snowflake</p>
 </header>
 
 <nav>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -119,48 +145,65 @@
     <div class="section" id="about">
         <h2>About Me</h2>
         <p>
-        I am a Senior Data Analyst with 7+ years of experience in end-to-end data analytics. 
-        Currently working at Bilight Solutions, I specialize in transforming raw data into actionable business insights.
-        </p>
-        <p>
-        I have hands-on experience across the complete analytics lifecycle, including requirement gathering, ETL processes,
-        data modeling, and dashboard development using Tableau and SQL.
-        </p>
-        <p>
-        I have worked across Finance and HR domains, delivering KPI dashboards and collaborating with stakeholders
-        including senior business leaders.
+        Senior Data Analyst with 3.4 years of experience in end-to-end analytics, working across Finance and HR domains.
+        Skilled in Tableau, SQL, ETL, and dashboard development.
         </p>
     </div>
 
-    <div class="section" id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <p><strong>Senior Data Analyst – Bilight Solutions</strong></p>
-            <p>• Delivered end-to-end analytics solutions from data extraction to dashboard creation</p>
-            <p>• Built interactive dashboards for Finance and HR domains</p>
-            <p>• Improved business decision-making through KPI tracking</p>
-            <p>• Worked on Tableau Server, publishing dashboards and implementing RLS</p>
-            <p>• Collaborated with stakeholders and business leaders</p>
-            <p>• Supported multiple teams with data-driven insights</p>
-            <p>• Experience with Data Lake and Amazon Redshift</p>
-            <p>• Travelled to Mumbai for stakeholder discussions and requirement gathering</p>
+    <!-- PROJECTS -->
+    <div class="section" id="projects">
+        <h2>Projects</h2>
+
+        <div class="projects">
+            <div class="card">
+                <img src="https://via.placeholder.com/300">
+                <div class="card-content">
+                    <h3>Sales Dashboard</h3>
+                    <p>Revenue, profit & KPI analysis dashboard.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300">
+                <div class="card-content">
+                    <h3>Loan Analytics</h3>
+                    <p>Delinquency and risk insights dashboard.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300">
+                <div class="card-content">
+                    <h3>Snowflake Integration</h3>
+                    <p>End-to-end pipeline with Snowflake + Power BI.</p>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- SKILLS -->
     <div class="section" id="skills">
         <h2>Skills</h2>
-        <div class="skills">
-            <span>Tableau</span>
-            <span>Power BI</span>
-            <span>SQL</span>
-            <span>Snowflake</span>
-            <span>Excel</span>
-            <span>Amazon Redshift</span>
-            <span>ETL</span>
-            <span>Data Modeling</span>
+
+        <div class="skill">Tableau
+            <div class="bar"><div style="width:90%"></div></div>
         </div>
+
+        <div class="skill">Power BI
+            <div class="bar"><div style="width:85%"></div></div>
+        </div>
+
+        <div class="skill">SQL
+            <div class="bar"><div style="width:80%"></div></div>
+        </div>
+
+        <div class="skill">Snowflake
+            <div class="bar"><div style="width:60%"></div></div>
+        </div>
+
     </div>
 
+    <!-- CONTACT -->
     <div class="section" id="contact">
         <h2>Contact</h2>
         <p>Email: yourmail@gmail.com</p>
@@ -170,7 +213,7 @@
 </div>
 
 <footer>
-    <p>© 2026 Vignesh | Data Analyst Portfolio</p>
+    <p>© 2026 Vignesh | Portfolio</p>
 </footer>
 
 </body>

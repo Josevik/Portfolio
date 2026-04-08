@@ -12,124 +12,118 @@ body {
     background: #f3f2ef;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
     background: white;
     padding: 10px 50px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
 }
 
 .logo {
     color: #0a66c2;
-    font-weight: bold;
     font-size: 22px;
+    font-weight: bold;
 }
 
-.navbar a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-}
-
-/* Layout */
+/* LAYOUT */
 .container {
-    width: 900px;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    gap: 20px;
+    width: 1000px;
     margin: 20px auto;
 }
 
-/* Card */
+/* CARD */
 .card {
     background: white;
     border-radius: 10px;
-    margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
-/* Profile Header */
+/* PROFILE */
 .banner {
-    height: 180px;
+    height: 150px;
     background: url('https://images.unsplash.com/photo-1557683316-973673baf926') center/cover;
     border-radius: 10px 10px 0 0;
 }
 
 .profile-section {
     position: relative;
-    padding: 20px;
 }
 
 .profile-img {
-    width: 120px;
+    width: 100px;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 3px solid white;
     position: absolute;
-    top: -60px;
+    top: -50px;
+    left: 20px;
 }
 
 .profile-info {
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
+/* BUTTON */
 button {
-    padding: 8px 15px;
     background: #0a66c2;
     color: white;
     border: none;
+    padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
 }
 
-/* Skills */
+/* SKILLS */
 .skill-bar {
+    height: 8px;
     background: #eee;
     border-radius: 5px;
-    height: 8px;
-    margin-top: 5px;
 }
 
 .skill-fill {
-    background: #0a66c2;
     height: 8px;
+    background: #0a66c2;
     border-radius: 5px;
 }
 
-/* Projects */
-.project {
-    display: flex;
-    gap: 15px;
+/* POSTS */
+.post {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
 }
 
-.project img {
-    width: 120px;
-    border-radius: 8px;
+.post img {
+    width: 100%;
+    border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <div class="navbar">
     <div class="logo">in</div>
-    <div>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </div>
+    <div>Vignesh | Data Analyst</div>
 </div>
 
 <div class="container">
 
-<!-- Profile -->
+<!-- LEFT SIDE -->
+<div>
+
+<!-- PROFILE -->
 <div class="card">
     <div class="banner"></div>
     <div class="profile-section">
         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="profile-img">
-
         <div class="profile-info">
             <h2>Vignesh</h2>
             <p>Senior Data Analyst</p>
@@ -138,16 +132,53 @@ button {
     </div>
 </div>
 
-<!-- About -->
-<div class="card" id="about">
+<!-- ABOUT -->
+<div class="card">
     <h3>About</h3>
     <p>
-    Strategic and results-driven Senior Data Analyst specializing in Tableau, Power BI, SQL, and data modeling. Expert in building executive dashboards and transforming complex data into actionable insights.
+    Strategic and results-driven Data Analyst specializing in dashboards, KPI frameworks, and business insights using Tableau, Power BI, and SQL.
     </p>
 </div>
 
-<!-- Skills -->
-<div class="card" id="skills">
+<!-- ACTIVITY / POSTS -->
+<div class="card">
+    <h3>Activity</h3>
+
+    <div class="post">
+        <p><b>Built Executive Dashboard</b></p>
+        <p>Created cross-domain dashboards integrating Finance & HR data.</p>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    </div>
+
+    <div class="post">
+        <p><b>Automated Reporting</b></p>
+        <p>Improved reporting efficiency using ETL pipelines.</p>
+        <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4">
+    </div>
+
+</div>
+
+<!-- PROJECTS -->
+<div class="card">
+    <h3>Projects</h3>
+    <p>Executive KPI Dashboard</p>
+    <p>Data Pipeline Automation</p>
+    <p>KPI Framework Development</p>
+</div>
+
+<!-- CERTIFICATION -->
+<div class="card">
+    <h3>Certification</h3>
+    <p><b>Tableau Desktop Specialist</b></p>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<div>
+
+<!-- SKILLS -->
+<div class="card">
     <h3>Skills</h3>
 
     <p>Tableau</p>
@@ -159,48 +190,18 @@ button {
     <p>SQL</p>
     <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
 
-    <p>AWS / Redshift</p>
+    <p>AWS</p>
     <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
 </div>
 
-<!-- Projects -->
-<div class="card" id="projects">
-    <h3>Projects</h3>
-
-    <div class="project">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-        <div>
-            <h4>Executive KPI Dashboard</h4>
-            <p>Cross-domain dashboards for leadership insights.</p>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="project">
-        <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4">
-        <div>
-            <h4>Data Pipeline Automation</h4>
-            <p>Automated ETL workflows improving performance.</p>
-        </div>
-    </div>
+<!-- INSIGHTS -->
+<div class="card">
+    <h3>Insights</h3>
+    <p>Dashboard Performance Optimization</p>
+    <p>KPI Standardization</p>
+    <p>Data Modelling</p>
 </div>
 
-<!-- Certification -->
-<div class="card">
-    <h3>Certification</h3>
-    <p><b>Tableau Desktop Specialist</b></p>
-    <p>Dashboard design, KPI modeling, and storytelling.</p>
-</div>
-
-<!-- Achievements -->
-<div class="card">
-    <h3>Achievements</h3>
-    <ul>
-        <li>Reduced dashboard delivery time</li>
-        <li>Improved data accuracy</li>
-        <li>Enabled executive decision-making</li>
-    </ul>
 </div>
 
 </div>

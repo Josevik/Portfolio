@@ -16,58 +16,92 @@ body {
 /* Container */
 .container {
     width: 800px;
-    margin: 60px auto;
+    margin: 80px auto;
 }
 
-/* Name */
+/* Header */
 h1 {
-    font-size: 40px;
-    margin-bottom: 5px;
+    font-size: 48px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
 }
 
 .subtitle {
-    color: #555;
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.2s;
 }
 
 /* Sections */
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
 }
 
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
+.section:nth-child(7) { animation-delay: 0.7s; }
+
 .section h2 {
-    font-size: 18px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #999;
     margin-bottom: 10px;
-    color: #888;
 }
 
 /* Divider */
 hr {
     border: none;
     border-top: 1px solid #eee;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 /* Skills */
 .skills span {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 12px;
     margin-bottom: 10px;
-    padding: 6px 12px;
-    background: #f3f3f3;
+    padding: 6px 14px;
+    background: #f5f5f7;
     border-radius: 20px;
     font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: black;
+    color: white;
 }
 
 /* Button */
 button {
-    padding: 10px 18px;
+    padding: 10px 20px;
     border: none;
     background: black;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #333;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -79,7 +113,7 @@ button {
 <!-- HEADER -->
 <h1>Vignesh</h1>
 <p class="subtitle">
-Senior Data Analyst focused on building high-quality dashboards and data models that drive business decisions
+Senior Data Analyst building scalable dashboards and data models that drive business decisions
 </p>
 
 <button>Download Resume</button>
@@ -90,7 +124,7 @@ Senior Data Analyst focused on building high-quality dashboards and data models 
 <div class="section">
     <h2>ABOUT</h2>
     <p>
-    I design and deliver data solutions that help businesses understand performance, identify opportunities, and make better decisions. My work focuses on building scalable dashboards, defining KPIs, and ensuring data accuracy across systems.
+    I design and deliver data solutions that help businesses understand performance, identify opportunities, and make better decisions. My work focuses on dashboards, KPI frameworks, and ensuring data accuracy.
     </p>
 </div>
 
@@ -100,7 +134,7 @@ Senior Data Analyst focused on building high-quality dashboards and data models 
 <div class="section">
     <h2>EXPERIENCE</h2>
     <p>
-    Delivered executive dashboards, handled client requirements end-to-end, and translated business needs into analytical solutions. Recognized with Best Team Award for strong collaboration and delivery.
+    Delivered executive dashboards, managed client requirements end-to-end, and translated business needs into analytical solutions. Recognized with Best Team Award for strong collaboration and delivery.
     </p>
 </div>
 
